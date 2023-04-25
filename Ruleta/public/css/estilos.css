@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  .ruleta {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background-color: #181be225;
+    border-radius: 50%;
+    border: 4px solid #61b61b;
+    overflow: hidden;
+    transition: transform 5s ease-out;
+  }
+  
+  .segmento {
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transform-origin: 100% 50%;
+  }
+  
+  .segmento span {
+    position: absolute; /* Añadido para posicionar el texto */
+    top: 50%; /* Añadido para centrar el texto verticalmente */
+    left: 0; /* Añadido para alinear el texto a la izquierda */
+    transform: translateY(-50%); /* Añadido para centrar el texto verticalmente */
+    width: 100%; /* Añadido para ocupar todo el ancho del segmento */
+    line-height: 1.2; /* Añadido para ajustar el espacio entre líneas */
+  }
+  
+  
+  
+  .indicador {
+    position: absolute;
+    top: 98%;
+    left: calc(50% - 15px);
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #000;
+  }
+  
+  .boton-girar {
+    position: absolute;
+    bottom: -100px;
+    left: calc(50% - 50%);
+    width: 100px;
+    height: 40px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .contenedor {
+    position: relative;
+  }
+  
